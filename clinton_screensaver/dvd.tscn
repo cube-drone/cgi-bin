@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b4ufn6ko8qxc4"]
+
+[ext_resource type="Script" uid="uid://jhktk5ubfwl1" path="res://components/dvd-bounce/DVDBounce.cs" id="1_um52b"]
+[ext_resource type="PackedScene" uid="uid://dij00ead4n7fc" path="res://clinton_screensaver/clinton_sprite.tscn" id="2_8l1fm"]
+
+[node name="Dvd" type="Node2D" unique_id=1526803228 node_paths=PackedStringArray("BoundsRect", "Target", "SizeRect")]
+script = ExtResource("1_um52b")
+BoundsRect = NodePath("BoundsRect")
+Target = NodePath("ClintonSprite")
+SizeRect = NodePath("SizeRect")
+
+[node name="BoundsRect" type="ColorRect" parent="." unique_id=2058348093]
+offset_right = 796.0
+offset_bottom = 597.0
+color = Color(1, 1, 1, 0)
+
+[node name="SizeRect" type="ColorRect" parent="." unique_id=1471498055]
+offset_left = 77.0
+offset_top = 72.0
+offset_right = 200.0
+offset_bottom = 197.0
+color = Color(1, 1, 1, 0)
+
+[node name="ClintonSprite" parent="." unique_id=592855403 instance=ExtResource("2_8l1fm")]
+position = Vector2(129, 136)

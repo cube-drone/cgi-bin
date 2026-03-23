@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dij00ead4n7fc"]
+
+[ext_resource type="Script" uid="uid://2hjjm41ivhrq" path="res://clinton_screensaver/Autoplay.cs" id="1_7pt7a"]
+[ext_resource type="Texture2D" uid="uid://3xrxibcxah2t" path="res://clinton_screensaver/clinton.png" id="1_sb4jc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7pt7a"]
+atlas = ExtResource("1_sb4jc")
+region = Rect2(0, 0, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bfay"]
+atlas = ExtResource("1_sb4jc")
+region = Rect2(0, 120, 120, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_75fal"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_7pt7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bfay")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_7pt7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bfay")
+}],
+"loop": true,
+"name": &"honk",
+"speed": 5.0
+}]
+
+[node name="ClintonSprite" type="Node2D" unique_id=592855403]
+script = ExtResource("1_7pt7a")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1572768015]
+sprite_frames = SubResource("SpriteFrames_75fal")
+animation = &"honk"
