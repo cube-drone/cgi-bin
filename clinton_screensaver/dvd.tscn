@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://jhktk5ubfwl1" path="res://components/dvd-bounce/DVDBounce.cs" id="1_um52b"]
 [ext_resource type="PackedScene" uid="uid://dij00ead4n7fc" path="res://clinton_screensaver/clinton_sprite.tscn" id="2_8l1fm"]
+[ext_resource type="AudioStream" uid="uid://ctqmdev74mk7s" path="res://clinton_screensaver/clinton.mp3" id="3_8l1fm"]
 
 [node name="Dvd" type="Node2D" unique_id=1526803228 node_paths=PackedStringArray("BoundsRect", "Target", "SizeRect")]
 script = ExtResource("1_um52b")
@@ -23,3 +24,8 @@ color = Color(1, 1, 1, 0)
 
 [node name="ClintonSprite" parent="." unique_id=592855403 instance=ExtResource("2_8l1fm")]
 position = Vector2(129, 136)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=327093108]
+stream = ExtResource("3_8l1fm")
+autoplay = true
+parameters/looping = true
